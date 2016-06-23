@@ -93,6 +93,8 @@ map <leader>e :e! ~/.vimrc<cr>
 map <leader>z g~iwea
 imap <leader>z <esc>g~iwea
 
+" make copy easier
+imap <c-v> <esc>"+gP
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
