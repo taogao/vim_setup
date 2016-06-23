@@ -62,7 +62,8 @@ set colorcolumn=80
 " set background=light
 set background=dark
 colorscheme PaperColor
-"
+set guifont=Consolas:h13
+set guioptions-=T
 set number
 set laststatus=2
 
@@ -74,7 +75,6 @@ set mouse=n
 set nocursorline
 " Sets how many lines of history VIM has to remember
 set history=700
-
 " Enable filetype plugin
 filetype plugin on
 filetype indent on
