@@ -1,3 +1,6 @@
+map <leader>z g~iwea
+imap <leader>z <esc>g~iwea
+
 inoremap ;' <esc>A/>
 inoremap ;c <><esc>i
 
