@@ -58,6 +58,8 @@ set nospell
 set tw=79
 set colorcolumn=80
 
+syntax on
+
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
@@ -67,7 +69,6 @@ set tm=500
 " Ignore case when searching
 set ignorecase
 
-" colorscheme peaksea
 " set background=light
 set background=dark
 colorscheme PaperColor
