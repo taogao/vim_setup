@@ -58,11 +58,22 @@ set nospell
 set tw=79
 set colorcolumn=80
 
-" colorscheme peaksea
+syntax on
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" Ignore case when searching
+set ignorecase
+
 " set background=light
 set background=dark
 colorscheme PaperColor
-"
+set guifont=Consolas:h13
+set guioptions-=T
 set number
 set laststatus=2
 
@@ -74,7 +85,6 @@ set mouse=n
 set nocursorline
 " Sets how many lines of history VIM has to remember
 set history=700
-
 " Enable filetype plugin
 filetype plugin on
 filetype indent on
@@ -90,9 +100,8 @@ let g:mapleader = "\/"
 
 map <leader>e :e! ~/.vimrc<cr>
 
-map <leader>z g~iwea
-imap <leader>z <esc>g~iwea
-
+" make copy easier
+imap <c-v> <esc>"+gP
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
@@ -102,7 +111,7 @@ imap <leader>z <esc>g~iwea
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
-" When you press <leader>r you can search and replace the selected text
+" When you press <leader>q you can search and replace the selected text
 vnoremap <silent> <leader>q :call VisualSelection('replace')<CR>
 " vnoremap <silent> gv :call VisualSelection('gv')<CR>
 
@@ -188,12 +197,12 @@ au FileType cpp,c,h  set autoindent
 
 "pymode stuff"
 let g:pymode_lint = 1
-let g:pymode_lint_on_write = 1
+let g:pymode_lint_on_write = 0
 let g:pymode_lint_on_fly = 1
 let g:pymode_lint_unmodified = 0
+let g:pymode_lint_cwindow = 1
 let g:pymode_options_fold = 1
 let g:pymode_rope = 0
-let g:pymode_lint_cwindow = 1
 let g:pymode_run = 1
 let g:pymode_lint_ignore = "E731"
 au FileType python map <F5> :PymodeLint<Esc>

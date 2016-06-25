@@ -1,0 +1,11 @@
+Instructions for installing Vim on Windows
+
+1. install python(2.7.6) win64/python-2.7.6.amd64.msi  
+2. install vim with win64/vim7.4.1848_x64.exe/
+3. open "Git bash"
+4. cd path_to_vim_setup/win64
+5. sh install_vim.sh
+6. open a "windows cmd.txt"(note: no longer in Git Bash)
+7. cd .vim\bundle\YouCompleteMe
+8. install.py --clang-completer 
+9. use gvim by typing gvim in the windows cmd.
