@@ -31,7 +31,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
-"Plugin 'vim-scripts/Conque-GDB'
+Plugin 'vim-scripts/Conque-GDB'
 
 Plugin 'tomtom/tcomment_vim'
 
@@ -44,6 +44,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'klen/python-mode'
 
 Plugin 'vim-scripts/AutoClose'
+
+Plugin 'danro/rename.vim'
+
+Plugin 'sukima/xmledit'
 
 "all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -261,5 +265,8 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 "Nerdtree stuff
 map <C-n> :NERDTreeToggle<CR>
 
+"AutoClose stuff
+" add <angular brackets> 
+let g:AutoClosePairs = ("() [] {} <> ` \" '")
 
 
