@@ -43,12 +43,16 @@ Plugin 'klen/python-mode'
 
 Plugin 'vim-scripts/AutoClose'
 
+<<<<<<< HEAD
 Plugin 'SirVer/ultisnips'
 
 Plugin 'honza/vim-snippets' 
 
 Plugin 'vim-scripts/c.vim'
 
+Plugin 'danro/rename.vim'
+
+Plugin 'sukima/xmledit'
 
 "all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -137,7 +141,7 @@ function! VisualSelection(direction) range
 
     if a:direction == 'b'
         execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
+   elseif a:direction == 'gv'
         call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
     elseif a:direction == 'replace'
         call CmdLine("%s" . '/'. l:pattern . '/')
@@ -268,6 +272,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 "Nerdtree stuff
 map <C-n> :NERDTreeToggle<CR>
 
+<<<<<<< HEAD
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 "
 
@@ -275,6 +280,11 @@ let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+=======
+"AutoClose stuff
+" add <angular brackets> 
+let g:AutoClosePairs = ("() [] {} <> ` \" '")
+>>>>>>> 716bf58c5f7192f0be31b4850991b785c19f3242
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
