@@ -23,15 +23,13 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
-
 Plugin 'vim-airline/vim-airline'
 
 Plugin 'vim-airline/vim-airline-themes'
 
-
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
-"Plugin 'vim-scripts/Conque-GDB'
+Plugin 'vim-scripts/Conque-GDB'
 
 Plugin 'tomtom/tcomment_vim'
 
@@ -46,6 +44,11 @@ Plugin 'klen/python-mode'
 Plugin 'vim-scripts/AutoClose'
 
 Plugin 'SirVer/ultisnips'
+
+Plugin 'honza/vim-snippets' 
+
+Plugin 'vim-scripts/c.vim'
+
 
 "all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -214,6 +217,8 @@ au FileType python map <F5> :PymodeLint<Esc>
 let g:ycm_min_num_of_chars_for_completion = 3
 let g:ycm_collect_identifiers_from_tags_files = 1 
 let g:ycm_always_populate_location_list = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_config.py'
+" let g:ycm_python_binary_path = "/usr/bin/python3"
 nnoremap <leader>gt :YcmCompleter GoTo<CR>
 
 
@@ -264,7 +269,10 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 map <C-n> :NERDTreeToggle<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<leader-tab>"
+"
+
+let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
